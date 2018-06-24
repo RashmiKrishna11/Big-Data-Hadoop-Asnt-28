@@ -16,35 +16,6 @@ object asnt27 {
       .config("spark.some.config.option", "some-value")
       .getOrCreate()
     println("Spark Session Object created")
-   /* val Manual_schema_Flight = new StructType(Array(new StructField("Date", StringType, true),
-      new StructField("slno", LongType, false),
-      new StructField("Year", LongType, true),
-      new StructField("Month", LongType, false),
-      new StructField("DayofMonth", LongType, false),
-      new StructField("DayOfWeek", LongType, false),
-      new StructField("DepTime", LongType, false),
-      new StructField("CRSDepTime", LongType, false),
-      new StructField("ArrTime", LongType, true),
-      new StructField("CRSArrTime", LongType, false),
-      new StructField("FlightNum", LongType, false),
-      new StructField("ActualElapsedTime", LongType, false),
-      new StructField("CRSElapsedTime", LongType, false),
-      new StructField("AirTime", LongType, false),
-      new StructField("ArrDelay", LongType, true),
-      new StructField("DepDelay", LongType, false),
-      new StructField("Origin", StringType, false),
-      new StructField("Dest", StringType, false),
-      new StructField("Distance", LongType, false),
-      new StructField("TaxiIn", LongType, false),
-      new StructField("TaxiOut", LongType, true),
-      new StructField("Cancelled", LongType, false),
-      new StructField("CancellationCode", StringType, false),
-      new StructField("Diverted", LongType, false),
-      new StructField("CarrierDelay", LongType, false),
-    new StructField("WeatherDelay", LongType, false),
-    new StructField("NASDelay", LongType, true),
-    new StructField("SecurityDelay", LongType, false),
-    new StructField("LateAircraftDelay", LongType, false)))*/
 
     val Flight = spark.read.format("CSV").option("header", true).load("E:\\assignments ss\\DelayedFlights.csv")
     val Fl = Flight.toDF()
